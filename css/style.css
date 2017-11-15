@@ -1,0 +1,99 @@
+/* =================================
+  Base Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	line-height: 1.5;
+}
+
+
+.search_container {
+  width: 100%;
+  max-width: 1280px;
+  background-color: #ffffff;
+}
+
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.search input {
+  font-size: 16pt;
+  line-height: 30pt;
+  border: 2px #999 solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+.image_gallery {
+  width: 100%;
+
+}
+.gallery_item {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.thumbnail {
+  width: 200px;
+  margin: 30px;
+  border: 1px #999 solid;
+
+}
+
+/* =================================
+  Media Queries
+==================================== */
+@media(min-width:480px) {
+  .search_container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.search {
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      max-width: 460px;
+  }
+  .search input {
+      width: 100%;
+  }
+
+  .container {
+    max-width: 1280px;
+  }
+
+  .image_gallery {
+    margin-left: 8.5%;
+    margin-right: 8.5%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery_item {
+    max-width: 260px;
+    margin: 0;
+    flex-basis: 200px;
+  }
+}
