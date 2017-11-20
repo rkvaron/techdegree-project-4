@@ -1,6 +1,4 @@
-var userSearch =  document.getElementById('#search');
-var searchResults = [];
-var captionList;
+
 
 function print(results) {
   document.write(results);
@@ -8,25 +6,29 @@ function print(results) {
 
 
 function myFunction() {
-   // Declare variables
-   var input, filter, gallery, item, a, i;
-   input = document.getElementById('search');
-   filter = input.value.toUpperCase();
-   gallery = document.getElementById("image_gallery");
-   item = gallery.getElementsByClass("gallery_item");
+  // Declare variables
+  var userSearch;
+  userSearch = document.getElementById('search');
+  var filter;
+  filter = userSearch.value.toLowerCase();
+  var ul;
+  ul = document.getElementById("image_gallery");
+  var li;
+  li = ul.getElementsByTagName('li');
+  var a, i;
+  var searchResults = [];
+  var captionList;
 
-   // Loop through all list items, and hide those who don't match the search query
-   for (i = 0; i < item.length; i++) {
-       a = item[i].getElementsByTagName("a")[data-caption];
-       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-           li[i].style.display = "";
-       } else {
-           li[i].style.display = "none";
-       }
-   }
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i+=1 ) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
-
-
 
 /*create the array to search from
 
