@@ -10,19 +10,20 @@ function myFunction() {
   var userSearch;
   userSearch = document.getElementById('search');
   var filter;
-  filter = userSearch.value.toLowerCase();
+  filter = userSearch.value.toUpperCase();
   var ul;
   ul = document.getElementById("image_gallery");
   var li;
   li = ul.getElementsByTagName('li');
   var a, i;
   var searchResults = [];
-  var captionList;
+  var caption = document.getElementsByTagName("A")[0].getAttribute("data-caption");
+
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i+=1 ) {
         a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        if (a.getAttribute("data-caption").toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
@@ -30,13 +31,7 @@ function myFunction() {
     }
 }
 
-/*create the array to search from
 
-for ( var i = 0; i < 12; i+=1 ) {
-  captions =
-  searchResults.push(captions);
-  console.log(searchResults[i]);
-}
 
 
 
